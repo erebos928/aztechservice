@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 namespace Merchant.Resolver
 {
     class DbResourceLocator : ResourceLocator
+
     {
         static readonly String[] features = { "Id", "Price", "Currency", "Description", "Code", "Title", "Voltage", "Weight", "Brand", "Color", "Size", "Image" };
         public Node Locate(string currNode)
