@@ -15,7 +15,8 @@ namespace Merchant.Resolver
         {
             // search in categories
             SqlConnection conn = new SqlConnection();
-            conn.ConnectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\csharp\AztechService\AztechService\db\verdana.mdf;Integrated Security=True;Connect Timeout=30";
+
+            conn.ConnectionString = AztechService.Vendor.Default.ConnString;// @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=E:\csharp\AztechService\AztechService\db\verdana.mdf;Integrated Security=True;Connect Timeout=30";
             SqlCommand command = new SqlCommand();
             command.CommandText = "select * from category where Id=@currNode";
             command.Parameters.AddWithValue("@currNode", currNode);
